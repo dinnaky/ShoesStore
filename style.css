@@ -1,0 +1,281 @@
+/*Css global*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --button: #FF0000;
+    --main-background:  #C4C4C4;
+    --background: #E5E5E5;
+    --text: #000;
+    --footer: #000;
+    --text-description: #9C9696;
+    --font-: 'Roboto';
+}
+
+body {
+    font-family: var(--font-);
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*header*/
+
+header {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    position: fixed;
+}
+
+.first, .secound {
+    display: flex;
+}
+
+.first {
+    gap: 90px;
+}
+
+.first .primary-list {
+    list-style-type: none;
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.first ul li a{
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    transition: color .2s;
+}
+
+.first ul li a:hover {
+    color: #494949;
+}
+
+.secound {
+    gap: 50px;
+}
+
+.search {
+    display: flex;
+}
+
+.search input{
+    padding: 10px 20px;
+    border: transparent;
+}
+
+.search img {
+    background-color: #FFF;
+    padding: 10px;
+}
+
+/*CSS MAIN*/
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    margin: auto;
+    gap: 26px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.principal h1{
+    font-size: 50px;
+}
+
+.principal p {
+    font-size: 16px;
+    color: var(--text-description);
+}
+
+.principal h2 {
+    font-size: 30px;
+}
+
+.principal a {
+    background-color: var(--button);
+    text-decoration: none;
+    color: #FFF;
+    padding: 20px;
+    width: 15vw;
+    text-align: center;
+    transition: all .2s;
+}
+
+.principal a:hover {
+    background-color: #fc3434;
+}
+
+.principal a:active {
+    transform: scale(0.9);
+}
+
+/*MAIN - RIGHT*/
+
+.principal-shoes {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-background);
+}
+
+.shoes-photos {
+    margin: auto;
+    text-align: center;
+}
+
+.shoe {
+    transition: all .2s;
+}
+
+.shoe:hover {
+    transform: scale(1.1);
+}
+
+.galery {
+    display: flex;
+    gap: 16px;
+}
+
+.galery img {
+    width: 31%;
+    transition: all .2s;
+}
+
+.galery img:hover {
+    transform: scale(1.1);
+}
+
+
+/*responsive*/
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: #000;
+    margin: 8px;
+}
+
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    header {
+        background-color: var(--background);
+        position: static;
+        justify-content: space-around;
+    }
+
+    .secound input {
+        width: 60vw;
+    }
+
+    main {
+        display: block;
+    }
+
+    .principal {
+        width: 100vw;
+        display: block;
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    .principal a {
+        display: block;
+        margin: 1em auto;
+        width: 30vw;
+    }
+
+    .principal-shoes {
+        width: auto;
+        height: auto;
+        background-color: var(--background);
+    }
+    .shoe {
+        width: 50%
+    }
+
+    .galery img {
+        width: 25%;
+        margin: auto;
+    }
+
+    footer img {
+        display: none;
+    }
+
+
+
+/*menu-bar*/
+    .first a img {
+        display: none;
+    }
+
+    .primary-list {
+        margin-top: 2em;
+        position: absolute;
+        top: 8vh;
+        left: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: var(--background);
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .primary-list.active{
+        transform: translateX(0);
+    }
+
+    .primary-list li {
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
