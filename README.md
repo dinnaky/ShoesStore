@@ -8,6 +8,10 @@
   <img src=".github/preview.jpg"
 </p>
 
+## O projeto:
+
+Dessa vez me desafiei a fazer o responsivo do site, ultilizando um menu responsivo.
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
